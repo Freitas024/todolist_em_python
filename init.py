@@ -17,8 +17,6 @@ while True:
             task_done()
         elif escolha == 3:
             view_list()
-        elif escolha == 4:
-            print("Removendo um tarefa")
         else: 
             print("Opção invalida, por favor, escolha novamente.")
         

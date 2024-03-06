@@ -5,7 +5,6 @@ def Exibir_menu():
     print("1. Adicionar uma Tarefa")
     print("2. Finalizar Tarefa")   
     print("3. Visualizar Tarefas")
-    print("4. Remover uma tarefa")
     print("0. Sair do programa")    
 
 def add_task(new_task):
