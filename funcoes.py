@@ -10,28 +10,24 @@ def Exibir_menu():
 
 def add_task(new_task):
     Lista.append(new_task)
-    print("="*18)
     print("\nNova tarefa adicionada na lista.\n")
-    print("="*18)
     
 def view_list():
-    print("="*18)
-    print(f"\nTarefas listadas: {Lista}\nTarefas concluidas:{Concluidas}\n")
-    print("="*18)
+    print(f"\nTarefas listadas: {Lista}\n\nTarefas concluidas:{Concluidas}\n")
     
 def task_done():
     while True:
+        print("="*18)
         for indice, value in enumerate(Lista):
-            print(f'{indice+1}. {value}')
+            print(f'{indice}. {value}')
         
         escolha = int(input("Qual tarefa você deseja marca como finalizada: "))
         
         if escolha == indice:
-            print('='*18)
-            print(f'A tarefa {value} foi marcada como finalizada.')
-            print('='*18)
+            tarefa_finalizada = Lista.pop(indice)
+            Concluidas.append(tarefa_finalizada)
+            print(f'\nA tarefa {value} foi marcada como finalizada.\n')
             break
         else:
-            print("="*18)
-            print('Tarefa não encontrada, Escolha uma mostrada na lista.')
-            print("="*18)
+            print('\nTarefa não encontrada, Escolha uma mostrada na lista.\n')
+        print("="*18)
